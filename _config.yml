@@ -23,8 +23,8 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  avatar           : "Blazewing.jpg"
+  name             : "Blazewing"
   pronouns         : "They/Them, She/Her"
   bio              : "Blazewing was here"
   location         : "Edmonton"
