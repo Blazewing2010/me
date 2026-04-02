@@ -24,6 +24,9 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Install Python dependency
+        run: pip install requests
+
       - name: Fetch Substack feed
         run: python scripts/fetch_substack.py
 
