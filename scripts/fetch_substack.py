@@ -7,7 +7,7 @@ from html import unescape
 from pathlib import Path
 from urllib.error import HTTPError
 
-FEED_URL = "https://YOURSUBSTACKNAME.substack.com/feed"
+FEED_URL = "https://pronounsandpolitics.substack.com/feed"
 OUTPUT_FILE = Path("_data/substack.json")
 MAX_POSTS = 12
 
