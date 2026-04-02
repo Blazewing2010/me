@@ -5,10 +5,12 @@ import xml.etree.ElementTree as ET
 from email.utils import parsedate_to_datetime
 from html import unescape
 from pathlib import Path
+from urllib.error import HTTPError
 
-FEED_URL = "https://pronounsandpolitics.substack.com/feed"
+FEED_URL = "https://YOURSUBSTACKNAME.substack.com/feed"
 OUTPUT_FILE = Path("_data/substack.json")
 MAX_POSTS = 12
+
 
 def strip_html(text):
     if not text:
@@ -18,6 +20,7 @@ def strip_html(text):
     text = re.sub(r"\s+", " ", text).strip()
     return text
 
+
 def get_text(element, tag_names):
     for tag in tag_names:
         found = element.find(tag)
@@ -25,23 +28,41 @@ def get_text(element, tag_names):
             return found.text.strip()
     return ""
 
+
 def main():
-    with urllib.request.urlopen(FEED_URL) as response:
-        xml_data = response.read()
+    req = urllib.request.Request(
+        FEED_URL,
+        headers={
+            "User-Agent": "Mozilla/5.0",
+            "Accept": "application/rss+xml, application/xml, text/xml;q=0.9, */*;q=0.8",
+        },
+    )
+
+    try:
+        with urllib.request.urlopen(req) as response:
+            xml_data = response.read()
+    except HTTPError as e:
+        raise RuntimeError(f"Could not fetch feed {FEED_URL}: HTTP {e.code}") from e
 
     root = ET.fromstring(xml_data)
     channel = root.find("channel")
 
-    posts = []
-
     if channel is None:
         raise ValueError("Could not find RSS channel in Substack feed.")
 
-    for item in channel.findall("item")[:MAX_POSTS]:
+    items = channel.findall("item")
+    print(f"Found {len(items)} feed items")
+
+    posts = []
+
+    for item in items[:MAX_POSTS]:
         title = get_text(item, ["title"])
         link = get_text(item, ["link"])
         pub_date = get_text(item, ["pubDate"])
-        description = get_text(item, ["description", "{http://purl.org/rss/1.0/modules/content/}encoded"])
+        description = get_text(
+            item,
+            ["description", "{http://purl.org/rss/1.0/modules/content/}encoded"]
+        )
 
         parsed_date = ""
         if pub_date:
@@ -51,7 +72,8 @@ def main():
                 parsed_date = pub_date
 
         excerpt = strip_html(description)
-        excerpt = excerpt[:280].rsplit(" ", 1)[0] + "..." if len(excerpt) > 280 else excerpt
+        if len(excerpt) > 280:
+            excerpt = excerpt[:280].rsplit(" ", 1)[0] + "..."
 
         posts.append({
             "title": title,
@@ -63,6 +85,9 @@ def main():
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     with OUTPUT_FILE.open("w", encoding="utf-8") as f:
         json.dump(posts, f, ensure_ascii=False, indent=2)
+
+    print(f"Wrote {len(posts)} posts to {OUTPUT_FILE}")
+
 
 if __name__ == "__main__":
     main()
