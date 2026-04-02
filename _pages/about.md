@@ -37,7 +37,7 @@ Rasputin - Tortoise shell and always into mischief.
   </ul>
 
   <p>
-    <a href="/research-journal/">View all journal entries →</a>
+    <a href="../research-journal/">View all journal entries →</a>
   </p>
 </section>
 
