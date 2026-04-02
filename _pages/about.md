@@ -18,7 +18,6 @@ Bastet - Street rescue, partial Russian Blue, and 20 lbs
 Rasputin - Tortoise shell and always into mischief.
 
 
-<section>
   <h2>Latest Research Journal Entries</h2>
   <ul>
     {% for post in site.data.substack limit:5 %}
@@ -39,7 +38,6 @@ Rasputin - Tortoise shell and always into mischief.
   <p>
     <a href="https://blazewing2010.github.io//me/research-journal/">View all journal entries →</a>
   </p>
-</section>
 
 
 This is where my epic bio goes when I get it done. Here, I'll talk about what I'm up to, what I'm contemplating, and all that jazz.
