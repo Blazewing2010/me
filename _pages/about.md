@@ -7,9 +7,15 @@ redirect_from:
   - /about.html
 ---
 
-Blazewing is an academic whose studies focus on anti-trans narratives. Their current focus right now is the anti-trans legislation in the US and the rhetorical patterns contained within it at both the state and federal levels. Overall, they aim to study how anti-queer rhetoric repeats throughout history. 
+Blazewing is a nonbinary queer academic whose studies focus on anti-trans narratives. Their current focus right now is the anti-trans legislation in the US and the rhetorical patterns contained within it at both the state and federal levels. Overall, they aim to study how anti-queer rhetoric repeats throughout history. Their current personal hobbies include a love of travel and seeing new places, table-top roleplaying games like Dungeons and Dragons, Vampire the Masquerade, and a love for the gothic, morbid, and anything vampire-related. 
 
-They have a love of travel and seeing new places, table-top roleplaying games like Dungeons and Dragons, Vampire the Masquerade, and have a love for the gothic, morbid, and anything vampire-related. 
+Current Project:
+Blazewing's current research project is analyzing 2025's passed anti-trans legislation on both a state and federal level.
+
+Blazewing has 3 cats:
+Salem - Pure Black (totally original, I know, lol)
+Bastet - Street rescue, partial Russian Blue, and 20 lbs
+Rasputin - Tortoise shell and always into mischief.
 
 
 
