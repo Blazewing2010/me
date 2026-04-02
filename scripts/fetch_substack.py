@@ -1,13 +1,14 @@
 import json
 import re
-import xml.etree.ElementTree as ET
 from email.utils import parsedate_to_datetime
 from html import unescape
 from pathlib import Path
+from urllib.parse import quote
 
 import requests
 
 FEED_URL = "https://pronounsandpolitics.substack.com/feed"
+RSS2JSON_URL = f"https://api.rss2json.com/v1/api.json?rss_url={quote(FEED_URL, safe='')}"
 OUTPUT_FILE = Path("_data/substack.json")
 MAX_POSTS = 12
 
@@ -21,50 +22,19 @@ def strip_html(text):
     return text
 
 
-def get_text(element, tag_names):
-    for tag in tag_names:
-        found = element.find(tag)
-        if found is not None and found.text:
-            return found.text.strip()
-    return ""
-
-
 def main():
-    session = requests.Session()
-    response = session.get(
-        FEED_URL,
-        headers={
-            "User-Agent": (
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) "
-                "Chrome/124.0.0.0 Safari/537.36"
-            ),
-            "Accept": "application/rss+xml, application/xml, text/xml;q=0.9, */*;q=0.8",
-            "Accept-Language": "en-US,en;q=0.9",
-            "Referer": "https://pronounsandpolitics.substack.com/",
-            "Cache-Control": "no-cache",
-            "Pragma": "no-cache",
-        },
-        timeout=30,
-    )
+    response = requests.get(RSS2JSON_URL, timeout=30)
     response.raise_for_status()
+    data = response.json()
 
-    root = ET.fromstring(response.content)
-    channel = root.find("channel")
-    if channel is None:
-        raise ValueError("Could not find RSS channel in Substack feed.")
-
-    items = channel.findall("item")
+    items = data.get("items", [])
     posts = []
 
     for item in items[:MAX_POSTS]:
-        title = get_text(item, ["title"])
-        link = get_text(item, ["link"])
-        pub_date = get_text(item, ["pubDate"])
-        description = get_text(
-            item,
-            ["description", "{http://purl.org/rss/1.0/modules/content/}encoded"],
-        )
+        title = item.get("title", "").strip()
+        link = item.get("link", "").strip()
+        pub_date = item.get("pubDate", "").strip()
+        description = item.get("description", "").strip()
 
         parsed_date = ""
         if pub_date:
