@@ -23,7 +23,7 @@ permalink: /research-journal/
   </ul>
 
   <p>
-    <a href="../research-journal/">View all journal entries →</a>
+    <a href="https://pronounsandpolitics.substack.com/feed">View all journal entries →</a>
   </p>
 </section>
 
