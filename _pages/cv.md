@@ -12,7 +12,7 @@ redirect_from:
 Education
 ======
 
-* (IN PROGRESS) M.A. Digital Humanities, Univewrsity of Alberta, 2028
+* (IN PROGRESS) M.A. Digital Humanities, Univewrsity of Alberta, 2028 (Expected)
 * Bachelor of Communications, MacEwan University, 2024
 
 
@@ -20,17 +20,20 @@ Work experience
 ======
 * Job Title
   * Company
-  * Duties includes: 
+  * Duties include: 
   * Supervisor: 
 
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Photo editing (mobile, desktop)
+* Photography (mobile, DSLR)
+* Video Editing (mobile, desktop
+* Davinci Resolve
+* Podcast recording/editing
+* Microsoft Office
+* Interviewing
+* PowerPoint creation
+* Research
 
 Publications
 ======
@@ -54,4 +57,13 @@ UNDER CONSTRUCTION
   
 Service and leadership
 ======
-* Example 1
+* 2022 - 2024 Social Media Coordinator for Animethon.
+* January 2022 - April 2022 - Media Editor/Social Media Manager for the City Center Magpie.
+* November 2020 - Camera Operator for MacEwan University Events utilizing a 3-camera setup.  
+* 2013 - 2019 - First Aid for Animethon
+
+Grants and Awards
+======
+MacEwan Student Undergraduate Research Fund (SURF) - December 2021
+MacEwan Student Undergraduate Research Fund (SURF) - December 2023
+
