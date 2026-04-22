@@ -12,7 +12,7 @@ redirect_from:
 Education
 ======
 
-* (IN PROGRESS) M.A. Digital Humanities, Univewrsity of Alberta, 2028 (Expected)
+* (IN PROGRESS) M.A. Digital Humanities, University of Alberta, 2028 (Expected)
 * Bachelor of Communications, MacEwan University, 2024
 
 
@@ -64,6 +64,6 @@ Service and leadership
 
 Grants and Awards
 ======
-MacEwan Student Undergraduate Research Fund (SURF) - December 2021
-MacEwan Student Undergraduate Research Fund (SURF) - December 2023
+* December 2021 - MacEwan Student Undergraduate Research Fund (SURF)
+* December 2023 - MacEwan Student Undergraduate Research Fund (SURF) 
 
