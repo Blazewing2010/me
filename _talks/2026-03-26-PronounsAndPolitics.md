@@ -8,4 +8,4 @@ date: 2026-03-26
 location: "Edmonton, Alberta, Canada"
 ---
 
-This is a description of your conference proceedings talk, note the different field in type. You can put anything in this field.
+This talk covered what is to be the start of my textual analysis using digital humanist methods which include, but are not limited to, type-token ratio, word counting tokens, and utilizing tools such as R, Gephi, and Antconc
