@@ -12,10 +12,10 @@ Blazewing is a nonbinary queer academic whose studies focus on anti-trans narrat
 Current Project:
 Blazewing's current research project is analyzing 2025's passed anti-trans legislation on both a state and federal level.
 
-Blazewing has 3 cats:
-Salem - Pure Black (totally original, I know, lol)
-Bastet - Street rescue, partial Russian Blue, and 20 lbs
-Rasputin - Tortoise shell and always into mischief.
+Blazewing has 3 cats: <br>
+<li> Salem - Pure Black (totally original, I know, lol)
+<li> Bastet - Street rescue, partial Russian Blue, and 20 lbs
+<li> Rasputin - Tortoise shell and always into mischief.
 
 
   <h2>Latest Research Journal Entries</h2>
