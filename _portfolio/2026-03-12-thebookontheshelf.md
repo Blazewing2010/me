@@ -1,5 +1,5 @@
 ---
-title: "The Book On The SHelf"
+title: "The Book On The Shelf"
 excerpt: "Research creation project for DH 530 - Interactive Storytelling"
 collection: portfolio
 ---
