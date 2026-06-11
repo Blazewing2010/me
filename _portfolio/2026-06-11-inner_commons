@@ -5,6 +5,6 @@ collection: portfolio
 ---
 
 <a href="https://mxblazewing.itch.io/inner-commons"> Inner Commons on Itch.io</a>
-
+<p>
 With apps like Octocon and Simply Plural having been pulled offline and discontinued, the DID community has been left with few options for system management and tracking. From that knowledge, this idea was born. It's still a prototype, and I'm still tinkering with it, but this is the bare-bones concept idea that I've deployed on my own devices for field testing. Further ideas include multi-platform experience, syncing abilities, integration with calendar apps, and more. 
 
